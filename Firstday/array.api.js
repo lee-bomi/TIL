@@ -86,7 +86,6 @@ const students = [
 
 // Q8. check if there is a student with the score lower than 50
 {
-  console.clear();
   const result = students.some((student) => student.score < 50); //배열의 일부요소가 조건 충족해도 true
   console.log(result);
 
@@ -100,6 +99,7 @@ const students = [
 }
 
 // Q10. make a string containing all the scores
+
 // result should be: '45, 80, 90, 66, 88'
 {
 }

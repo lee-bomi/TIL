@@ -1,5 +1,5 @@
 "use strict";
 
-for (let i = 5; i >= 1; i = i - 2) {
-  console.log(" ".repeat((5 - i) / 2), "*".repeat(i));
+for (let i = 1; i <= 5; i++) {
+  console.log(" ".repeat(5 - i), "*".repeat(2 * i - 1));
 }
