@@ -32,3 +32,20 @@ git-hub
 : remote repository라 칭함
 - cat readme.md : pull해온 내용을 확인
 - git clone 주소 : 다른사람꺼 복사해올때
+
+
+commit 다루기
+-------------------
+#### 1. git log : 현재까지 모든 커밋 소환(4줄형태로_ID,사용자ID,날짜,커밋메세지)
+  * __git log --prety=oneline__ : (1줄 형태로 나타낸다
+#### 2. git show + ID : 각 기록에 무슨일이 있었는지 확인
+#### 3. git commit => i(기록모드) => commit메세지(제목 / 내용) => 맨아래 :wq 써서 마무리
+#### 4. git alias : 자주쓰는 Command에 별명을 붙임
+  * git config alias.history 'log --prety=oneline' : alias.원하는별명 '원래의 Command'  
+#### 5. git diff : Command사이에 어떤 다른점이 있는지 확인
+#### 6. git reset : 어느시점이후로 작업이 맘에안들때 돌아간다.(Working tree도 과거의 모습으로 돌아간다)
+#### 7. 최근커밋 수정법
+  * 내용수정 => git add. => git commit --amend => commit message수정하여 commit
+### ___Commit Message Write Method___ 
+* 첫글자는 대문자, 명령조로 쓸것(Fix the code), 끝에 온점x
+* 내용은 `왜 했는지`, `어떤 문제가 있었는지`, `적용한게 어떤효과가 가는지`
