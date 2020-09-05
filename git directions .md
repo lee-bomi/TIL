@@ -49,3 +49,15 @@ commit 다루기
 ### ___Commit Message Write Method___ 
 > 첫글자는 대문자, 명령조로 쓸것(Fix the code), 끝에 온점x  
 > 내용은 `왜 했는지`, `어떤 문제가 있었는지`, `적용한게 어떤효과가 가는지`
+#### 8. git reset
+* 종류 : --soft, --mixed, --hard  
+* ex) git reset --mixed ____  
+
+
+> ID대신 이전 커밋건을 reset하고 싶을때  
+-> git reset --soft __HEAD^__ : 이전커밋 reset  
+-> git reset --hard __HEAD~2__ : 2번째 전 커밋 reset  
+#### 9. git tag
+* 작성법 : git tag 태그이름 ID => git tag borobom1 03ew
+* git tag만 모아보기 :  git tag  
+* tag내부 들여다보기 :  git show borobom1  
