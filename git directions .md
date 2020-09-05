@@ -47,5 +47,5 @@ commit 다루기
 #### 7. 최근커밋 수정법(a.k.a ctrl z와 같다)
   * 내용수정 => git add. => git commit --amend => commit message수정하여 commit
 ### ___Commit Message Write Method___ 
-" 첫글자는 대문자, 명령조로 쓸것(Fix the code), 끝에 온점x
+" 첫글자는 대문자, 명령조로 쓸것(Fix the code), 끝에 온점x  
 " 내용은 `왜 했는지`, `어떤 문제가 있었는지`, `적용한게 어떤효과가 가는지`
