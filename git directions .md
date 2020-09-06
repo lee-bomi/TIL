@@ -2,15 +2,18 @@ git사용법
 ==============
 git
 -----------
-#### 1. git 사용절차
+#### 1. git & git-hub 사용절차
 - Working directory(working tree) : 파일을 만들어 저장하는 공간  
   | `add`    <-> `git reset`
 - Staging area : add한 파일이 모여있는곳(선별적으로 `원하는것만 커밋`하기위함)  
   | `commit`
-- Repository : working tree에 변경이력이 저장되어 있는곳
+- Repository : working tree에 변경이력이 저장되어 있는곳  
+  | `push`
+- git-hub 
 
 -__staging area의 존재이유__ : 파일수정은 했자만, 최신모습으로 커밋하고 싶지않은경우를 대비하기 위함  
-
+- cat ___ : working tree 확인  
+- git status : staging area확인! (commit하기전엔 항상 git status후 commit!)
 
 #### 2. git 파일상태
 - untracked : add X
@@ -61,3 +64,32 @@ commit 다루기
 * 작성법 : git tag 태그이름 ID => git tag borobom1 03ew
 * git tag만 모아보기 :  git tag  
 * tag내부 들여다보기 :  git show borobom1  
+
+#### 10. git branch  
+- Head : 매번 생기는 새 커밋을 가르킨다. HEAD가 가르키는 커밋에 따라 Working tree가 구성된다.  
+** branch command **  
+1. git branch A :  
+2. git checkout A : A브랜치로 이동  
+3. `git branch -b A` : A브랜치를 만들고, A로 이동!  
+4. git branch -d A :  
+5. git merge A : 현재 브랜치에 A의 브랜치를 가져와 합친다(현재 위치가 어디냐가 중요함)  
+    - Conflict 해결법 : 충돌파일열기 => merge되었으면 하는걸로 수정 => 커밋  
+    - `git merge --abort` : Merge 취소  
+6. `gid add -u origin master` : master에 있는 내용을 origin remote저장소로 보낸다. (만약 origin이 없다면 만들어서라도 보낸다)   
+    - -u = --set-upstream  *** 이 상태는 로컬&remote저장소가 tracking상태가 됨을 보여줌 ***  
+
+#### 11. HEAD & Branch
+    * HEAD : 최신커밋을 가르킴(Branch를 통해 간접적으로 가르킨다)
+    * Branch : 코드에 대한 관리흐름
+
+#### 12. git reset  vs git checkout
+    * git reset : Branch를 움직이는 명령어
+      * git reset ID : 커밋되지않은 변경사항이을 버리거나 커밋 폐기
+      * git reset 파일명 : 파일 staging취소
+--------------------------------------------------------------------------------
+    * git checkout : HEAD를 움직이는 명령어
+      * git checkout ID : 커밋 되돌리기
+      * git checkout 파일명 : 워킹트리에서 수정한 내용 취소하기(복구불가)
+      * git checkout 브랜치 : branch로 전환
+      
+
