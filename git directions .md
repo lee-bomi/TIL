@@ -14,7 +14,7 @@ git
 
 #### 2. git 파일상태
 - untracked : add X
-- tracked 
+- tracked ___(tracking이란? 로컬저장소의 특정 branch가 remote저장소의 연결된 branch를 계속바라보고있는것)___
   1. __staged__ : 처음 add했거나, commit된걸 수정하고 add한 상태
   2. __unmodified__ : commit직후 working directory내부 파일
   3. __modified__ : 수정된 상태  
