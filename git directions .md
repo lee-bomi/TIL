@@ -90,6 +90,40 @@ commit 다루기
     * git checkout : HEAD를 움직이는 명령어
       * git checkout ID : 커밋 되돌리기
       * git checkout 파일명 : 워킹트리에서 수정한 내용 취소하기(복구불가)
-      * git checkout 브랜치 : branch로 전환
-      
+      * git checkout 브랜치 : 브랜치로 전환
+
+협업하기
+==========================
+#### 1. git pull vs git fetch
+  * git fetch = remote 저장소에서 일단 가져와서 확인(HEAD가 가르키는 브랜치의 업스트림 브랜치로부터 가져옴)  
+  * git pull = fetch + merge  
+#### 2. git blame
+  * git show로도 작성자를 알 수 있다.
+#### 3. git revert 
+  => 이미 push가 된 상황에서 수정이 필요할때! => 수정 후 다시 push! = git revert  
+  * reset은 이전커밋으로 돌아가기때문에 remote 저장소와 버전에서 차이가 있어서 쓰면안됨  
+  * revert는 revert + ID로 다시한번더 커밋하는거라 remote저장소와 연결되어 있을땐 이걸로 써야함.  
+  * git revert A D : B, C, D의 커밋을 지움  
+
+git을 자유자재로 활용하기
+====================
+#### Q1. reset 후 이전커밋으로 돌아갈 수 있음(언제든 왔다갔다 가능!)
+  => git reflog(reference log) 돌아갈 ID가 생각나지 않을때 ID확인용으로 사용  
+#### Q2. 커밋 히스토리를 보는 가장 hip한 방법
+  => git log --pretty=oneline -all --graph  
+#### Q3. mergy vs rebase
+  => mergy는 새 커밋을 합쳐서 만듦  
+  => rebase는 원래 있던라인처럼 한줄로 옮겨옴(history를 깔끔하게 하고싶을때!  둘다 결과는 같다)  
+#### Q4. git stash(저장하다)
+  => 작업중인 정보를 잠시stack에 저장  
+  * 다른브랜치에서 잘못 작업한 경우?
+  * 원하는 브랜치로 이동 > git stash list(현재 저장된 stash를 확인) > git stash apply ID > git add . > git commit!  
+  => git stash drop ID : 삭제(apply완료된 stash는 바로바로 삭제할것)  
+  => git stash pop ID : 적용과 함께 stash를 삭제함
+#### Q5. git cherry-pick 
+  => 원하는 커밋내용만 현재 브랜치로 가져온다
+  
+  
+  
+  
 
