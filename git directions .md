@@ -123,6 +123,11 @@ git을 자유자재로 활용하기
 #### Q5. git cherry-pick 
   => 원하는 커밋내용만 현재 브랜치로 가져온다
   
+
+실제상황
+====================
+git push가 안될때 > git branch --set-upstream-to=origin/master master > git pull > git add . > git commit -m " " > git push  
+  
   
   
   
