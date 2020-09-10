@@ -19,6 +19,10 @@ function askForName() {
   form.addEventListener("submit", handleSubmit); //event는 버블과같아서 root에서부터 document까지 올라간다
 }
 function paintGreeting(text) {
+<<<<<<< HEAD
+=======
+  form.classList.remove(SHOWING_CN);
+>>>>>>> 4b2f45b691be70aa7e1de454cb4daa27412c26cf
   greetting.classList.add(SHOWING_CN);
   greetting.innerText = `hello ${text}`;
 }
