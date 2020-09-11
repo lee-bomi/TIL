@@ -1,8 +1,8 @@
-const form = document.querySelector(".js-form");
-const input = form.querySelector("input");
-const greetting = document.querySelector(".js-greetting");
-const USER_LS = "userName";
-const SHOWING_CN = "showing"; //CN=Class Name
+form = document.querySelector(".js-form");
+input = form.querySelector("input");
+greetting = document.querySelector(".js-greetting");
+USER_LS = "userName";
+SHOWING_CN = "showing"; //CN=Class Name
 
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
@@ -19,10 +19,7 @@ function askForName() {
   form.addEventListener("submit", handleSubmit); //event는 버블과같아서 root에서부터 document까지 올라간다
 }
 function paintGreeting(text) {
-<<<<<<< HEAD
-=======
   form.classList.remove(SHOWING_CN);
->>>>>>> 4b2f45b691be70aa7e1de454cb4daa27412c26cf
   greetting.classList.add(SHOWING_CN);
   greetting.innerText = `hello ${text}`;
 }

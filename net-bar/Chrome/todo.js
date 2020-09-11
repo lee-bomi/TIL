@@ -4,18 +4,18 @@ const toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
 const SHOWING_LN = "showing";
+let toDos = [];
 const newId = toDos.length + 1;
-const toDos = [];
 
-function filterFn(toDo) {
-  return toDo.id === 1;
-}
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li); //객체의 자식노드 제거
-  const cleanToDos = toDos.filter(filterFn);
-  console.log(cleanToDos);
+  const cleanToDos = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(li.id);
+  }); //filter는 true만 모아놓을 함수를 새로만들어야함(forEach와같이 각각item과 같이 실행)
+  toDos = cleanToDos;
+  saveToDos();
 }
 function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
