@@ -27,7 +27,7 @@ Aggregate Function(집계함수)
 * SELECT + 집계함수(MAX, MIN) 
 * SELECT + 산술함수(ABS, ROUND, SQRT)
 NULL 관리하기 
-* WHERE address IS NULL / IS NOT NULL  
+* WHERE address IS NULL / IS NOT NULL   (address NULL => 유효하지않은 명령)
 * NULL을 다른문자로 바꾸기  
 => SELECT COARLECE(height, '####') FROM member;
 
