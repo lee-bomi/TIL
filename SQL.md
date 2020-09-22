@@ -9,7 +9,8 @@
 * int, text타입 모두 부등호로 데이터 조회 가능
 ex) age > 20 , sign_up_day > '2020-01-01'  
 * ex) address LIKE '서울%' / '%안산시%'  
-* ex) age IN (20,30) => 같은 age 컬럼일때 괄호로 묶어서 사용  
+* ex) age IN (20,30) => 같은 age 컬럼일때 괄호로 묶어서 사용 
+ => IN : 집합연산자(~이거나 ~일때 괄호안에넣어 , 로 구분)   
   * %, ', \ 이 포함된 정보를 조회할때 => '20\%'  (앞에 백슬래시 써준다)  
 * 데이터 관련함수(WHERE뒤에 사용)  
 YEAR, MONTH, DAYOFMONTH, DATEDIFF(sign_up_day, CURDATE), DATE_ADD(sign_up_day) INTERVAL 200DAY : 회원가입으로부터 200일 후의 날짜, DATE_SUB, DATETIME(시간+날짜)  
