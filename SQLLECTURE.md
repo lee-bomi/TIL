@@ -1,5 +1,6 @@
 ```sql
-SELECT name, height FROM userTbl WHERE height IN (SELECT height FROM userTbl WHERE addr='경남'); -- 서브쿼리 사용하기  
+-- 서브쿼리 사용하기
+SELECT name, height FROM userTbl WHERE height IN (SELECT height FROM userTbl WHERE addr='경남'); 
 SELECT name, height FROM userTbl WHERE height IN (173,170);  -- 특정값은 이렇게 사용  
 CREATE TABLE buyTbl2 (SELECT * FROM buyTbl); -- buyTbl로부터 전체를 다시 가져와서 새 테이블 생성  
 SELECT emp_no, hire_date FROM employees  
