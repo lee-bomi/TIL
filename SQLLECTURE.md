@@ -1,8 +1,10 @@
 ```sql
 -- 서브쿼리 사용하기
 SELECT name, height FROM userTbl WHERE height IN (SELECT height FROM userTbl WHERE addr='경남'); 
-SELECT name, height FROM userTbl WHERE height IN (173,170);  -- 특정값은 이렇게 사용  
-CREATE TABLE buyTbl2 (SELECT * FROM buyTbl); -- buyTbl로부터 전체를 다시 가져와서 새 테이블 생성  
+-- 특정값은 이렇게 사용  
+SELECT name, height FROM userTbl WHERE height IN (173,170);  
+-- buyTbl로부터 전체를 다시 가져와서 새 테이블 생성  
+CREATE TABLE buyTbl2 (SELECT * FROM buyTbl); 
 SELECT emp_no, hire_date FROM employees  
 	ORDER BY hire_date ASC  
 		-- LIMIT 0,5;      --0번째부터 5개를 가져와라  
