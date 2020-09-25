@@ -88,7 +88,73 @@ SELECT YEAR(CURDATE()), MONTH(CURDATE()), DAYOFMONTH(CURDATE());
 SELECT HOUR(CURTIME()), MINUTE(current_time()), SECOND(current_time()), MICROSECOND(current_time());
 
 
+--09/25
+USE study;
+DROP TABLE DEPT;
+CREATE TABLE DEPT (
+	deptid INT NOT NULL PRIMARY KEY,
+    dname VARCHAR(10),
+    budget VARCHAR(10)
+);
+DESC DEPT;
+INSERT INTO DEPT VALUES(100, '영업부', '100k');
+INSERT INTO DEPT VALUES(200, '관리부', '300k');
+INSERT INTO DEPT VALUES(300, '구매부', '220k');
+INSERT INTO DEPT VALUES(400, '생산부', '500k');
+SELECT * FROM DEPT;
 
+DROP TABLE EMP;
+CREATE TABLE EMP(
+	empid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    ename VARCHAR(10),
+    deptid INT ,              -- 부서번호 
+    hire_date VARCHAR(10),
+    job VARCHAR(10),
+    manager INT,
+    salary INT,
+    FOREIGN KEY(deptid) REFERENCES DEPT(deptid)
+);
+DESC EMP;
+INSERT INTO EMP VALUES(1001, '홍성길', 100, '2001.2.1', '특수영업', 1002, 350);
+INSERT INTO EMP VALUES(NULL, '곽희준', 100, '1999.1.1', '영업관리', 1004, 400);
+INSERT INTO EMP VALUES(NULL, '김동준', 200, '2000.9.1', '품질관리', 1005, 300);
+INSERT INTO EMP VALUES(NULL, '성재규', 300, '1997.2.1', '급여', 1009, 450);
+INSERT INTO EMP VALUES(NULL, '박성범', 200, '2000.2.1', '수입자재', 1004, 320);
+SELECT * FROM EMP;
+
+-- SELECT문제
+SELECT ename, job, salary
+FROM EMP
+WHERE salary > 300 AND job = '영업관리';
+
+SELECT deptid, SUM(salary) AS '급여액 합계'
+FROM EMP
+GROUP BY deptid;
+
+SELECT D.dname, E.ename
+FROM DEPT AS D RIGHT OUTER JOIN EMP AS E
+ON D.deptid = E.deptid;
+
+SELECT budget 
+FROM EMP, DEPT
+WHERE DEPT.deptid = EMP.deptid AND EMP.ename = '곽희준';  -- JOIN없이 WHERE에 조건걸기
+
+INSERT INTO emp(empid, ename, deptid, hire_date, job, salary) VALUES (106, '강윤호', 200, '2001-01-10', '연말정산', 400);
+SELECT * FROM EMP;
+INSERT INTO emp(empid, ename, salary) VALUES (107, '남진선', 500);  -- 일부컬럼 생략시 자동으로 null
+SELECT * FROM EMP;
+
+SET sql_Safe_updates = 0;        -- 세이프모드 해제하기
+UPDATE EMP
+	SET deptid = 400, salary = 500
+	WHERE ename = '홍성길';
+SET sql_Safe_updates = 1; -- 세이프모드 설정하기
+SELECT * FROM EMP;
+
+UPDATE EMP
+SET salary = salary * 1.2
+WHERE deptid = (SELECT deptid FROM DEPT WHERE dname = '영업부');
+SELECT * FROM EMP;
 
 
 
