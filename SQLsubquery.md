@@ -1,7 +1,8 @@
 ## 위치에 따른 서브쿼리
 ### SELECT절의 서브쿼리  
 ```MYSQL
-
+SELECT id, name, price,(SELECT MAX(price) FROM item) AS max_price
+FROM copang_main.item;
 ```
 
 ### WHERE절의 서브쿼리
