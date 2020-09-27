@@ -23,7 +23,7 @@ GROUP BY item_id HAVING COUNT(*) >= 3
 )
 ```
 ### FROM절의 서브쿼리
-* <span style="color : red"> Derived Table : 서브쿼리로 탄생한 테이블 (alias필수) </span>
+<span style="color : red"> * Derived Table : 서브쿼리로 탄생한 테이블 (alias필수) </span>
 ```MYSQL
 select AVG(review_count)
 FROM
