@@ -83,6 +83,6 @@ SHOW FULL TABLES IN copang_main;
 DESCRIBE item;
 ```
 4. FOREIGN KEY확인 
-![capture](./창고/캡처.jpg)
+![capture](https://github.com/lee-bomi/git-practice-with-CIT/blob/master/foreignkey.JPG)
 
 ```
