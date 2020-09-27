@@ -5,6 +5,20 @@ SELECT id, name, price,(SELECT MAX(price) FROM item) AS max_price
 FROM copang_main.item;
 ```
 
+### FROM절의 서브쿼리
+#### * Derived Table : 서브쿼리로 탄생한 테이블 (alias필수) </span>
+```MYSQL
+select AVG(review_count)
+FROM
+(select
+    SUBSTRING(address, 1, 2) AS region,
+    COUNT(*) AS review_count
+FROM review AS r LEFT OUTER JOIN member AS m
+ON r.mem_id = m.mem_id
+GROUP BY SUBSTRING(address, 1, 2)
+HAVING region IS NOT NULL AND region != '안드' AS review_count_summary);
+```
+
 ### WHERE절의 서브쿼리
 * 계산하는 서브쿼리
 ```MYSQL
@@ -22,19 +36,7 @@ FROM review
 GROUP BY item_id HAVING COUNT(*) >= 3
 )
 ```
-### FROM절의 서브쿼리
-#### * Derived Table : 서브쿼리로 탄생한 테이블 (alias필수) </span>
-```MYSQL
-select AVG(review_count)
-FROM
-(select
-    SUBSTRING(address, 1, 2) AS region,
-    COUNT(*) AS review_count
-FROM review AS r LEFT OUTER JOIN member AS m
-ON r.mem_id = m.mem_id
-GROUP BY SUBSTRING(address, 1, 2)
-HAVING region IS NOT NULL AND region != '안드' AS review_count_summary);
-```
+
 
 ### 상관서브쿼리 
 * 서브쿼리만으로 동작이 안됨
