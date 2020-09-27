@@ -45,6 +45,7 @@ GROUP BY item_id HAVING COUNT(*) >= 3
 ```sql
 SELECT * FROM item
 WHERE EXISTS (SELECT item_id FROM review GROUP BY item_id HAVING COUNT(*) >= 3);
+```
 ※ 상관서브쿼리 and JOIN은 원하는값을 모아준다는 공통점이있다.  아래의 결과는 동일하므로 뭔하는걸 쓴다
 * 상관서브쿼리 사용
 ```sql
@@ -59,8 +60,8 @@ ON s.item_id = i.id;
 
 ### 서브쿼리로 코드를 줄이기!
 * alias처리해도 변수처럼 다시 사용 불가능하다
-#### * derived table에 alias를 붙이면 재사용가능(원래 존재하던 테이블인것처럼 취급하기 때문)
-#### ∴ FROM 뒤에 서브쿼리 + alias를 써서 코드를 재활용하자! </span>
+* __derived table에 alias를 붙이면 재사용가능(원래 존재하던 테이블인것처럼 취급하기 때문)
+* __∴ FROM 뒤에 서브쿼리 + alias를 써서 코드를 재활용하자! </span>
 
 ### 뷰(View, 가상테이블)
 * Join등의 작업으로 만들어진 결과테이블이 '가상'으로 저장된 형태(테이블을 간결하게 할수있다)
