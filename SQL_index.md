@@ -22,8 +22,8 @@ INDEX
     ```
 3) INDEX 명령어
 ```SQL
-SHOW INDEX FROM tbl;    -- 여기서 keyname과 primarykey가 같으면 클러스터형 인덱스임
+SHOW INDEX FROM tbl;               -- 여기서 keyname과 primarykey가 같으면 클러스터형 인덱스임
 SHOW TABLE STATUS LIKE 'usertbl';  -- 인덱스의 길이까지 알고싶을때
 CREATE INDEX idx_userTbl_addr ON userTbl(addr);  -- index명은 성의있게 만들기
-ANALYZE TABLE userTbl;       -- 공부기필요한부분 
+ANALYZE TABLE userTbl;             -- 공부기필요한부분 
 ```
