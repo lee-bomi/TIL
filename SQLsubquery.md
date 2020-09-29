@@ -36,6 +36,7 @@ FROM review
 GROUP BY item_id HAVING COUNT(*) >= 3
 )
 ```
+* 서브쿼리의 결과값이 여러개일때는 ALL,ANY를 
 
 
 ### 상관서브쿼리 
