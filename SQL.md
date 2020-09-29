@@ -68,5 +68,38 @@ ex) GROUP BY SUBSTRING(address, 1, 2), gender => 2가지 조건을 조합하여 
 => WHERE : 초기의 row 조건설정  
 => HAVING : 그루핑 후의 필터링하는 과정  
 
+### ROW와 COLUMN관리 
+1. ROW 관리 
+```SQL
+ INSERT INTO student VALUES ('오구', '황구');
+ UPDATE student SET major='멀티미디어' WHERE id=2;
+ DELETE FROM student WHERE id=4;
+ ```
+ => UPDATE & DELETE는 WHERE무조건써준다!
 
+2. COLUMN 관리
+* ALTER TABLE : 테이블 구조 변경하기  
+```SQL
+ALTER TABLE student ADD gender CHAR(1) NULL;  -- 컬럼추가하기
+```
+```SQL
+ALTER TABLE student DROP COLUMN admission_date;  -- 컬럼삭제하기 
+```
+```SQL
+ALTER TABLE student RENAME COLUMN student TO student_number  -- 컬럼이름수정
+```
+```SQL
+ALTER TABLE student MODIFY major INT;  -- 데이터타입 수정 / 유의사항 => 만약 CHAR -> INT형으로 바꿀시 해당하는 글자를 숫자로 바꿔놓은후 해당 명령어를 써야한다
+ALTER TABLE student MODIFY major INT NOT NULL DEFAULT 100;  -- 데이터속성 수정 => 보통 디폴트값은 이렇게 수정한다.
+```
+※ RENAME + MODIFY = CHANGE(이름 및 속성 타입 수정)  
+* UNIQUE : 같은값을 가진 추가ROW 방지  
+  => PRIMARY KEY vs UNIQUE  
+  * PRIMARY KEY : 테이블당 1개! NULL 인정하지않음
+  * UNIQUE : 테이블당 여러개가능, NULL 인정!
 
+* CONSTRAINT : 각 컬럼에 제약사항 걸기 
+```SQL
+ALTER TABLE student ADD CONSTRAINT st_rule CHECK(registration_number < 30000000);  -- 괄호안에 조건은 n가지 가능하다
+ALTER TABLE student DROP CONSTRAINT st_rule  -- 제약조건명을 알아야지만 constraint를 삭제할수있다.
+```
