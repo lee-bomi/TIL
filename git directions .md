@@ -111,8 +111,8 @@ git을 자유자재로 활용하기
   => git reflog(reference log) 돌아갈 ID가 생각나지 않을때 ID확인용으로 사용  
 #### Q2. 커밋 히스토리를 보는 가장 hip한 방법
   => git log --pretty=oneline -all --graph  
-#### Q3. mergy vs rebase
-  => mergy는 새 커밋을 합쳐서 만듦  
+#### Q3. merge vs rebase
+  => merge는 새 커밋을 합쳐서 만듦  
   => rebase는 원래 있던라인처럼 한줄로 옮겨옴(history를 깔끔하게 하고싶을때!  둘다 결과는 같다)  
 #### Q4. git stash(저장하다)
   => 작업중인 정보를 잠시stack에 저장  
