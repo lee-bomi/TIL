@@ -1,0 +1,13 @@
+body {
+  width: 1080px;
+}
+ul {
+  list-style: none;
+}
+button,
+button:focus {
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
