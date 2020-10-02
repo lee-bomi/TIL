@@ -1,5 +1,6 @@
 body {
   width: 1080px;
+  margin: 0;
 }
 ul {
   list-style: none;
@@ -10,4 +11,288 @@ button:focus {
   border: none;
   outline: none;
   cursor: pointer;
+}
+.hr0 {
+  border: 0;
+  height: 4px;
+  background: rgb(57, 216, 25);
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  padding-top: 10px;
+}
+header .top_left {
+  margin: 0;
+  color: gray;
+  font-family: "Nanum Gothic", sans-serif;
+  padding-left: 70px;
+}
+header .header_right {
+  width: 270px;
+  display: flex;
+  align-items: center;
+}
+header div .fa-ticket-alt {
+  color: rgb(57, 216, 25);
+  padding-right: 10px;
+}
+header div .header1_menu {
+  color: gray;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+}
+.hr1 {
+  border: 0;
+  height: 1px;
+  background: rgb(235, 232, 232);
+}
+.header2 {
+  display: flex;
+  align-items: center;
+}
+/*
+.header2 .header_title .search_input {
+  background: url(img/search-solid.svg) no-repeat scroll 270px;
+  height: 30px;
+  border-radius: 50px;
+} */
+.header2 .header_title {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 35px;
+}
+.header2 .header_title .search_input {
+  margin-top: 12px;
+  margin-left: 13px;
+}
+.header2 .header_title .search_input[type="text"] {
+  background-image: url(img/search-solid.svg);
+  background-position: 300px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  color: rgb(57, 216, 25);
+  height: 30px;
+  border-radius: 50px;
+}
+.header2 .header_title a {
+  text-decoration: none;
+  background-color: rgb(70, 233, 37);
+  border-radius: 10px;
+  color: white;
+  font-size: 9px;
+  padding: 3px;
+  font-weight: bold;
+  margin-top: 14px;
+  margin-left: 16px;
+}
+.header2 .header_title .rank_name {
+  color: black;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 24px;
+}
+.header2 .header_title .rank_state {
+  color: rgb(38, 247, 38);
+  font-size: 5px;
+  margin-top: 13px;
+  padding-left: 42px;
+}
+.header2 .header_rank {
+  display: flex;
+  align-items: center;
+  /*margin-right: 250px;
+  margin-top: 47px;*/
+}
+.header2 .header_option {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 12px;
+  width: 250px;
+  margin-top: 50px;
+}
+.header2 .header_option .name {
+  font-weight: bold;
+}
+.header2 .header_option .info {
+  text-decoration: underline;
+}
+.header2 .header_option .logout {
+  padding-right: 20px;
+}
+.header2 .header_option .fa-caret-square-down {
+  font-size: 17px;
+  color: lightgray;
+}
+nav ul {
+  display: flex;
+  padding-top: 70px;
+  padding-left: 57px;
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 0;
+}
+nav ul .menu_left {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 7px;
+}
+nav ul .menu_right {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(194, 189, 189);
+  padding-left: 170px;
+}
+.hr2 {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+.mymusic .contents h2 {
+  padding-left: 60px;
+  padding-top: 10px;
+}
+.mymusic .contents .mymusic_list {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+}
+.mymusic .mymusic_list {
+  border-collapse: collapse;
+  background-color: rgb(243, 241, 241);
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 12px;
+  margin-left: 82px;
+  border-top: 3px solid gray;
+  border-bottom: 1px solid white;
+  position: relative; /*상대적 위치 정하기*/
+  left: -1.9%; /* 방향설정*/
+}
+.mymusic td {
+  border: 1px solid lightgray;
+  padding: 15px 5px 10px 5px;
+  text-align: center; /*표 내부의 글자정렬*/
+}
+.mymusic td:nth-child(1) {
+  width: 70px;
+  background-color: white;
+  border-bottom: 1px solid white;
+}
+.mymusic td:nth-child(2) {
+  width: 100px;
+}
+.mymusic td:nth-child(3) {
+  width: 130px;
+}
+.mymusic td:nth-child(4) {
+  width: 100px;
+}
+.mymusic td:nth-child(5) {
+  width: 100px;
+}
+.mymusic td:nth-child(6) {
+  width: 130px;
+}
+.mymusic td:nth-child(7) {
+  width: 80px;
+}
+.mymusic td:nth-child(8) {
+  width: 140px;
+}
+
+.mymusic .contents .mymusic_second {
+  /* 뒷배경 박스, 배경사진 넣어주기*/
+  margin-top: 5px;
+  border: 1px solid lightgray;
+  background-color: wheat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 998px;
+  height: 260px;
+  position: relative;
+  left: 5.5%;
+  opacity: 90%;
+  background-image: url(https://images.unsplash.com/photo-1461902269707-fa102de8de65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+}
+.mymusic .contents .mymusic_second .white {
+  width: 998px;
+  height: 60px;
+  position: absolute;
+  color: white;
+  opacity: 80%;
+}
+.mymusic .contents .mymusic_second .mymusic_contents {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20%;
+  height: 50px;
+  color: white;
+}
+.mymusic .contents .mymusic_second .mymusic_contents .one {
+  position: absolute;
+  width: 800px;
+  top: 200%;
+}
+.mymusic .contents .mymusic_second .mymusic_contents .two {
+  position: absolute;
+  width: 800px;
+  top: 270%;
+  font-size: 20px;
+}
+.mymusic .contents .mymusic_second .mymusic_contents .three {
+  position: absolute;
+  top: 340%;
+  width: 800px;
+  color: rgb(231, 231, 231);
+}
+.mymusic .contents .mymusic_second .mymusic_contents .four {
+  position: absolute;
+  top: 437%;
+  font-size: 13px;
+  color: black;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+}
+
+.mymusic .contents .mymusic_second .mymusic_profile {
+  width: 130px;
+  border: 4px solid white;
+  position: absolute;
+  left: 4%;
+  top: 42%;
+}
+.mymusic .contents .mymusic_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 998px;
+  margin-left: 59px;
+  border: 1px solid lightgray;
+  border-top: 0px;
+  height: 40px;
+}
+.mymusic .contents .mymusic_bottom .profile_setting2 {
+  border: 1px solid lightgray;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Nanum Gothic", sans-serif;
+  border-radius: 5%;
+  margin: 0 32px;
+}
+.mymusic .contents .mymusic_bottom .fa-cog {
+  color: gray;
+}
+.mymusic .contents .mymusic_bottom .mymusic_right {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 12px;
+  display: flex;
+  color: gray;
 }
