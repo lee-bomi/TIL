@@ -21,6 +21,7 @@ button:focus {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 20px;
   padding-top: 10px;
 }
@@ -29,6 +30,7 @@ header .top_left {
   color: gray;
   font-family: "Nanum Gothic", sans-serif;
   padding-left: 70px;
+  font-size: 13px;
 }
 header .header_right {
   width: 270px;
@@ -204,6 +206,9 @@ nav ul .menu_right {
 .mymusic td:nth-child(8) {
   width: 140px;
 }
+.mymusic td:nth-child(9) {
+  width: 80px;
+}
 
 .mymusic .contents .mymusic_second {
   /* 뒷배경 박스, 배경사진 넣어주기*/
@@ -295,4 +300,364 @@ nav ul .menu_right {
   font-size: 12px;
   display: flex;
   color: gray;
+}
+.myplaylist {
+  position: relative;
+}
+.myplaylist .line_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding-top: 30px;
+  padding-left: 52px;
+  width: 800px;
+}
+.myplaylist .line_1 .fa-minus {
+  transform: rotate(90deg);
+  color: rgb(57, 216, 25);
+  font-size: 20px;
+}
+.myplaylist .line_1 .all_see {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 12px;
+  color: gray;
+  position: relative;
+
+  right: 80px;
+}
+.myplaylist .line_1 .fa-chevron-right {
+  font-size: 2px;
+  color: rgb(51, 189, 24); /*색 조정*/
+}
+.myplaylist .hr3 {
+  width: 720px;
+  margin-left: 60px;
+}
+
+.myplaylist .merge_playlist {
+  display: flex;
+  flex-direction: row;
+}
+.myplaylist div .playlist_1 {
+  display: flex;
+  width: 400px;
+}
+.myplaylist div .playlist_1 img {
+  width: 150px;
+  margin-left: 60px;
+  margin-top: 8px;
+}
+.myplaylist div .playlist_1 .contents_1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.myplaylist div .playlist_1 .contents_1 .work_1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 30px 0;
+  margin-bottom: 7px;
+}
+.myplaylist div .playlist_1 .contents_1 .work_2 {
+  font-size: 12px;
+  margin: 0;
+  color: gray;
+}
+.myplaylist div .playlist_1 .contents_1 .work_3 {
+  font-size: 13px;
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.myplaylist div .playlist_1 .contents_1 .work_4 {
+  width: 140px;
+  margin-bottom: 15px;
+}
+.myplaylist div .playlist_1 .contents_1 .work_5 {
+  font-size: 12px;
+  color: gray;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.myplaylist div .playlist_1 .contents_1 .work_6 {
+  font-size: 12px;
+  color: gray;
+  margin-top: 0px;
+}
+
+.myplaylist div .playlist_2 {
+  display: flex;
+  width: 400px;
+}
+.myplaylist div .playlist_2 img {
+  width: 150px;
+  margin-left: 60px;
+  margin-top: 8px;
+}
+.myplaylist div .playlist_2 .contents_2 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.myplaylist div .playlist_2 .contents_2 .work_1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 30px 0;
+  margin-bottom: 7px;
+}
+.myplaylist div .playlist_2 .contents_2 .work_2 {
+  font-size: 12px;
+  margin: 0;
+  color: gray;
+}
+.myplaylist div .playlist_2 .contents_2 .work_3 {
+  font-size: 13px;
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.myplaylist div .playlist_2 .contents_2 .work_4 {
+  width: 160px;
+  margin-bottom: 15px;
+  margin-left: 1px;
+}
+.myplaylist div .playlist_2 .contents_2 .work_5 {
+  font-size: 12px;
+  color: gray;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.myplaylist div .playlist_2 .contents_2 .work_6 {
+  font-size: 12px;
+  color: gray;
+  margin-top: 0px;
+}
+
+/* ----------------asede----------------------- */
+aside {
+  width: 280px;
+  position: relative;
+  left: 800px;
+  top: -250px;
+}
+aside .si {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-top: 30px;
+  padding-left: 10px;
+  width: 800px;
+}
+aside .si .fa-minus {
+  transform: rotate(90deg);
+  color: rgb(57, 216, 25);
+  font-size: 20px;
+}
+aside .si .fan_allsee {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 11px;
+  color: gray;
+  padding-left: 20px;
+}
+aside .si .fa-chevron-right {
+  font-size: 2px;
+  color: rgb(51, 189, 24); /*색 조정*/
+}
+aside .hr4 {
+  width: 220px;
+  margin-left: 20px;
+  color: lightgray;
+}
+aside div img {
+  width: 100px;
+  border: 1px solid gray;
+  margin-left: 20px;
+}
+aside .crush {
+  display: flex;
+  flex-direction: row;
+}
+aside div .crush_info {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 12px;
+}
+aside div .crush_info .crush_1 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-top: 3px;
+}
+aside div .crush_info .crush_2 {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+aside div .crush_info .crush_3 {
+  font-size: 11px;
+  margin-top: 0px;
+  margin-bottom: 21px;
+}
+aside div .crush_info .crush_4 {
+  font-size: 12px;
+  margin-top: 0px;
+  border: 1px solid lightgray;
+  border-radius: 5%;
+  width: 65px;
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  padding: 2px 0px;
+}
+aside div .crush_info .fa-star {
+  color: rgb(231, 209, 6);
+  padding-right: 10px;
+}
+aside .crush_and {
+  display: flex;
+}
+.ranking .part_1 {
+  border-collapse: collapse;
+  background-color: rgb(252, 249, 249);
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+  border-top: 1px solid rgb(211, 208, 208);
+  border-bottom: 1px solid white;
+  margin-left: 60px;
+  margin-top: -140px;
+}
+.ranking .part_1 td {
+  border: 1px solid rgb(231, 231, 231);
+  padding: 10px 5px 10px 5px;
+  text-align: center; /*표 내부의 글자정렬*/
+}
+.ranking .part_1 td:nth-child(1) {
+  width: 160px;
+  background-color: white;
+  border-bottom: 1px solid white;
+  border-top: 2px solid rgb(179, 179, 179);
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_1 td:nth-child(2) {
+  width: 160px;
+}
+.ranking .part_1 td:nth-child(3) {
+  font-size: 12px;
+  width: 368px;
+  color: rgb(116, 112, 112);
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: right;
+}
+.ranking .part_2 {
+  display: flex;
+  align-items: center;
+  margin-left: 67px;
+  font-size: 14px;
+}
+.ranking div .cb1 {
+  width: 12px;
+  border-radius: 20;
+  position: relative;
+}
+.ranking div .ranking_song {
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
+}
+.ranking div .cb2 {
+  width: 12px;
+  border-radius: 20;
+  margin-left: 10px;
+  position: relative;
+}
+.ranking div .ranking_video {
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
+}
+.ranking .hr5 {
+  width: 720px;
+  margin-left: 60px;
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+.ranking .part_3 {
+  border-collapse: collapse;
+  background-color: rgb(252, 249, 249);
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(141, 243, 8);
+  margin-top: 2px;
+  margin-left: 49px;
+}
+
+.ranking .part_3 {
+  border-collapse: collapse;
+  background-color: rgb(255, 253, 253);
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+  border-bottom: 3px solid white;
+}
+.ranking .part_3 td {
+  padding: 2px 5px 2px 5px;
+  text-align: center; /*표 내부의 글자정렬*/
+  color: rgb(118, 199, 12);
+  font-size: 11px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+}
+.ranking .hr6 {
+  width: 720px;
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 1px;
+  border-top: 2px solid rgb(122, 194, 29); /* 한줄짜리 hr에는 이렇게 적용! */
+}
+.ranking .part_3 td:nth-child(1) {
+  width: 18px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  padding-left: 15px;
+}
+.ranking .part_3 td:nth-child(2) {
+  width: 14px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(3) {
+  width: 230px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(4) {
+  width: 140px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(5) {
+  width: 78px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(6) {
+  width: 78px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(7) {
+  width: 28px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.ranking .part_3 td:nth-child(8) {
+  width: 28px;
+  background-color: white;
+  font-family: "Nanum Gothic", sans-serif;
 }
