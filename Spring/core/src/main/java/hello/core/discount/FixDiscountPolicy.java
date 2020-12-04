@@ -2,6 +2,7 @@ package hello.core.discount;
 
 import hello.core.member.Grade;
 import hello.core.member.Member;
+import org.w3c.dom.ls.LSOutput;
 
 public class FixDiscountPolicy implements DiscountPolicy {
 
