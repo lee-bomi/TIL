@@ -2,6 +2,7 @@ package hello.core.scope;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 
@@ -13,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 public class SingletonWithPrototypeTest1 {
 
     @Test
-    void prototypeFine() {
+    void prototypeFind() {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
 
         PrototypeBean prototypeBean1 = ac.getBean(PrototypeBean.class);
@@ -25,6 +26,37 @@ public class SingletonWithPrototypeTest1 {
         assertThat(prototypeBean2.getCount()).isEqualTo(1);
 
 
+    }
+
+    @Test
+    void singletonClientUsePrototype() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class, ClientBean.class);
+
+        ClientBean clientBean1 = ac.getBean(ClientBean.class);
+        int count1 = clientBean1.logic();
+        assertThat(count1).isEqualTo(1);
+
+        ClientBean clientBean2 = ac.getBean(ClientBean.class);
+        int count2 = clientBean2.logic();
+        assertThat(count2).isEqualTo(2);
+
+
+    }
+
+    @Scope("singleton")
+    static class ClientBean{
+        private final PrototypeBean prototypeBean;      //생성시점에 주입됨(그래서 주임된것으로 계속사용함-프로토타입쓰는 의미가없음(프로토타입은 그때그때 새거로 만들고싶은거니까))
+
+        @Autowired
+        public ClientBean(PrototypeBean prototypeBean) {
+            this.prototypeBean = prototypeBean;
+        }
+
+        public int logic() {
+            prototypeBean.addCount();
+            int count = prototypeBean.getCount();
+            return count;         //ctrl+alt+N = inline합치기
+        }
     }
 
     @Scope("prototype")
